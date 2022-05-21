@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: Karla, sans-serif;
+    font-size: 16px;
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vh;
+    margin: 0 auto;
+}    
+
+section.main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    overflow: hidden;
+    position: relative;
+        top: 15%;
+        margin-right: -50%;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 100%;
+}
+
+.cabecalho {
+    background-color: #FFF;
+    background-size: ;
+    padding: 50px 0px 50px 40px;
+    border-radius: 10px 0 0 0 0;
+    /*height: 217px;
+    width: 632px; */
+}
+
+.titulo-cabecalho {
+    color: hsl(179, 62%, 43%);
+    padding-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.subtitulo-cabecalho {
+    color: hsl(71, 73%, 54%);
+    padding-bottom: 19px;
+    font-size: 1.2em;
+}
+
+.paragrafo-cabecalho {
+    color: hsl(218, 22%, 67%);
+    line-height: 20px;
+}
+
+.segundo-conteudo-pagina {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(179, 62%, 43%);
+    border-radius: 0 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.secao-month {
+    min-width: 50%;
+    padding-top: 30px;   
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.titulo-month {
+    font-size: 1.2em;
+    padding-bottom: 30px;
+    color: hsl(204, 43%, 98%);
+}
+
+.paragrafo-month {
+    padding-bottom: 20px;
+    color: hsl(204, 43%, 100%);
+    
+}
+
+.paragrafo-month1 {
+    color: hsl(204, 43%, 85%);    
+}
+
+span {
+    color: hsl(204, 43%, 100%);    
+    font-size: 2em;
+    padding-right: 18px;
+    font-weight: 700;
+}
+
+.botao-sign-up {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    height: 47px;
+    width: 237px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    color: #FFF;
+    font-size: 1em;
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 0 0 1em teal;
+}
+
+.botao-sign-up:hover {
+    background-color: hsl(72, 75%, 48%);
+    cursor: pointer;
+}
+
+.secao-why-us {
+    min-width: 50%;
+    padding-left: 40px;
+    padding-top: 30px;
+    background-color: hsl(179, 62%, 50%);    
+}
+
+.titulo-why-us {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: hsl(204, 43%, 98%);
+}
+
+.lista-why-us {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.item-lista-why-us {
+    line-height: 20px;
+}
+
+.link-lista-why-us {
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 400;
+    color: hsl(204, 43%, 95%);  
+}
+
+.link-lista-why-us:hover {
+     color: hsl(204, 43%, 90%);   
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 45px;  
+    position: relative;
+    top: 70px;
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+.custom-shape-divider-top-1652989678 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1652989678 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 149px;
+}
+
+.custom-shape-divider-top-1652989678 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1652989678 svg {
+        width: calc(100% + 1.3px);
+        height: 58px;
+    }
+}
+
+
+.custom-shape-divider-bottom-1652990460 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1652990460 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110px;
+}
+
+.custom-shape-divider-bottom-1652990460 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1652990460 svg {
+        width: calc(100% + 1.3px);
+        height: 58px;
+    }
+}

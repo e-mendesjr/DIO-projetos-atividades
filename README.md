@@ -1,4 +1,4 @@
-# Atividades e Projetos do DIO
+# Atividades e Projetos da DIO
 
 ### A criação deste repositório é referente ao desafio: Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso do Bootcamp TQI Fullstack Developer.
 

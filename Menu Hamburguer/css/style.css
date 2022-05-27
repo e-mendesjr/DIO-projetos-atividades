@@ -1,0 +1,483 @@
+
+body
+{
+    font-family: 'Arial', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    color: #000;
+
+}
+
+/* HEADER */
+
+.cabecalho
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+
+    animation: backgroundTransition 20s linear infinite; 
+
+    background: linear-gradient(-45deg, #050404, #2e1c2b, #4a1942, #893168);
+    background-size: 400% 400%;
+
+    align-items: center;
+    justify-content: center;
+
+
+    --size: 20px;
+    background-image: radial-gradient(circle, black 0%, black 15%, transparent 15%, transparent 100%),
+                      radial-gradient(circle, gold 0%, gold 15%, transparent 15%, transparent 100%);
+    background-size: var(--size) var(--size);
+    background-position: 0 0, calc(var(--size)/2) calc(var(--size)/2);
+}
+
+.tituloCabecalho
+{
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 4em;
+    margin-bottom: 40px;
+}
+
+.subtituloCabecalho
+{
+    font-size: 1em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.redesSociais
+{
+    display: flex;
+
+    margin-top: 1rem;
+}
+
+.redesSociais a
+{
+
+    display: flex;
+
+    min-width: 4rem;
+    padding: 1rem 4rem;
+
+    transition: .5s cubic-bezier(.55, .025, .675, .97);
+    text-decoration: none;
+
+    color: #FFF;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.redesSociais a:hover
+{
+   box-shadow: 3px 4px 13px 7px rgba(7,2,0,0.61);
+   border-radius: 5px;
+}
+
+@keyframes backgroundTransition
+{
+    0%
+    {
+        background-position: 0 0, 0 0;
+    }
+
+    100%
+    {
+        background-position: 0 100%, 0 100%;
+    }
+}
+
+/* MENU HAMBURGUER */
+
+.checkboxContainer
+{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox
+{
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+
+    display: flex;
+
+    width: 100px;
+    height: 100px;
+
+    cursor: pointer;
+    transition: 400ms ease-in-out 0s;
+
+    justify-content: center;
+}
+
+.checkbox .traco
+{
+    position: absolute;
+
+    width: 50px;
+    height: 2px;
+
+    transition: .5s ease-in-out;
+
+    border-radius: 4px;
+    background-color: #000;
+}
+
+.checkbox .traco:nth-child(1)
+{
+    top: 26px;
+
+    transform: rotate(0);
+}
+
+.checkbox .traco:nth-child(2)
+{
+    top: 46px;
+
+    transform: rotate(0);
+}
+
+.checkbox .traco:nth-child(3)
+{
+    top: 66px;
+
+    transform: rotate(0);
+}
+
+#menuTracos
+{
+    display: none;
+}
+
+/* MENU */
+
+.menu
+{
+    position: absolute;
+    z-index: -1;
+    top: 28px;
+    right: 30px;
+
+    width: 40px;
+    height: 40px;
+
+    transition: 400ms ease-in-out 0s;
+
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 0 0 0 white;
+}
+
+.menuItens
+{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    visibility: hidden;
+
+    width: 100%;
+    height: 100vh;
+
+    transition: 400ms ease-in-out 0s;
+
+    opacity: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.menuItens ul
+{
+    list-style-type: none;
+}
+
+.menuItens ul li a
+{
+    font-size: 40px;
+
+    margin: 10px 0;
+
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #2e1c2b;
+}
+
+.menuItens ul li a:hover {
+    color: #D9C9C3;
+}
+/* ANIMAÇÃO DO MENU */
+
+#menuTracos:checked + .checkbox .traco:nth-child(1)
+{
+    top: 47px;
+
+    transform: rotate(45deg);
+
+    background-color: #2e1c2b;
+}
+
+#menuTracos:checked + .checkbox .traco:nth-child(2)
+{
+    visibility: hidden;
+
+    width: 30px;
+
+    transform: translateX(-100px);
+
+    opacity: 0;
+}
+
+#menuTracos:checked + .checkbox .traco:nth-child(3)
+{
+    top: 48px;
+
+    transform: rotate(-45deg);
+
+    background-color: #2e1c2b;
+}
+
+#menuTracos:checked + .checkbox
+{
+    background-color: white;
+}
+
+#menuTracos:checked ~ .menu
+{
+    z-index: 1;
+
+    box-shadow: 0 0 0 100vmax white;
+}
+
+#menuTracos:checked ~ .menuItens
+{
+    visibility: visible;
+
+    opacity: 1;
+}
+
+/* CARDS 
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+    margin: 3rem 0;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cardContainer
+{
+    display: flex;
+
+    width: 90%;
+
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card
+{
+    display: flex;
+
+    width: 400px;
+    height: 300px;
+    margin: 3rem 0 0 0;
+
+    cursor: pointer;
+    transition: .3s;
+
+    color: white;
+    background-image: url("../imagens/room.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(.5);
+}
+
+.cardTexto
+{
+    font-family: sans-serif;
+
+    width: 40%;
+
+    letter-spacing: 1px;
+
+    color: rgb(109, 109, 109);
+}
+
+.cardSocial
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.cardSocial::before
+{
+    position: absolute;
+
+    display: block;
+
+    width: 100px;
+    height: 100px;
+
+    content: '';
+    transition: .3s;
+
+    opacity: 0;
+    border: 1px solid white;
+}
+
+.cardSocial h2
+{
+    font-size: 40px;
+
+    margin: 0;
+
+    transition: .3s;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.cardSocial p
+{
+    font-size: 0;
+    font-weight: bold;
+
+    visibility: hidden;
+
+    transition: .3s;
+    text-transform: uppercase;
+
+    opacity: 0;
+}
+
+.card:hover
+{
+    filter: unset;
+}
+
+.card:hover > .cardSocial::before
+{
+    width: 350px;
+    height: 250px;
+
+    opacity: 1;
+}
+
+.card:hover > .cardSocial p
+{
+    font-size: 14px;
+
+    visibility: visible;
+
+    opacity: 1;
+}
+*/
+/* FOOTER
+
+.footer
+{
+    display: flex;
+
+    width: 100%;
+    height: 100px;
+
+    background-color: #2e1c2b;
+
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+@media (max-width: 800px) and (min-width: 360px)
+{
+
+    .tituloCabecalho {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .subtituloCabecalho {
+        font-size: 0.7em;
+        margin-bottom: 30px;
+    }
+    .cabecalho {
+        --size: 40px;
+    }
+    .redesSociais
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .container
+    {
+        margin-top: 0;
+    }
+
+    .cardContainer
+    {
+        flex-direction: column;
+    }
+
+    .container .cardContainer:nth-child(1),
+    .container .cardContainer:nth-child(3)
+    {
+        flex-direction: column-reverse;
+    }
+
+    .card
+    {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cardTexto
+    {
+        width: 90%;
+        margin-top: 2rem;
+
+        text-align: center;
+    }
+
+    .card:hover > .cardSocial::before
+    {
+        width: 190px;
+        height: 190px;
+    }
+}
